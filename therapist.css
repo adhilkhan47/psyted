@@ -1,0 +1,328 @@
+/* Therapist Page Specific Styles */
+
+/* Intro Section */
+.therapist-intro {
+  width: 100%;
+  padding: 60px 30px;
+  background: var(--color-surface);
+}
+
+.intro-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro-container h1 {
+  font-size: 48px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  color: var(--color-text);
+}
+
+.lead-intro {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--color-muted-text);
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+.intro-badges {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.intro-badges .badge {
+  background: var(--color-highlight);
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+/* Filters Section */
+.filters-section {
+  width: 100%;
+  padding: 40px 30px;
+  background: var(--color-bg);
+}
+
+.filters-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.filters-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.filters-header h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: var(--color-text);
+}
+
+.filters-header .muted {
+  font-size: 16px;
+}
+
+.results-count {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+/* Therapist Grid */
+.therapist-container {
+  width: 100%;
+  padding: 40px 30px 80px;
+  background: var(--color-bg);
+}
+
+.therapist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Detailed Therapist Cards */
+.therapist-card {
+  background: var(--color-surface);
+  box-shadow: 0 1px 3px var(--color-border);border: 0.5px solid var(--color-border);
+  padding: 24px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.therapist-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 12px 24px 24px 0px var(--color-card-shadow);
+}
+
+.therapist-card-header {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.therapist-avatar {
+  width: 120px;
+  height: 160px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+  
+}
+
+.therapist-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.therapist-name {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.therapist-title {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.therapist-languages {
+  margin: 0 0 12px 0;
+  font-size: 13px;
+  color: var(--color-muted-text);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.therapist-languages::before {
+  content: "";
+  font-size: 14px;
+}
+
+.therapist-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.therapist-rating::before {
+  content: "★";
+  font-size: 16px;
+}
+
+.therapist-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+
+.therapist-card-body {
+  margin-bottom: 20px;
+}
+
+.therapist-bio {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-muted-text);
+  margin: 0 0 16px 0;
+}
+
+.therapist-specialties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.specialty-tag {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: var(--color-highlight);
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--color-text);
+}
+
+.therapist-card-footer {
+  margin-top: auto;
+}
+
+.therapist-card-footer .btn {
+  width: 100%;
+  justify-content: center;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.searchCard{background: var(--color-surface); border-radius: 12px; margin-top:16px}
+.searchRow{background-color: var(--color-surface); border-radius: 12px; padding: 12px;}
+.searchRow select{background-color: transparent; border: none; color: var(--color-text);}
+.searchRow button{background-color: var(--color-accent); color: white; border: none; padding: 10px 14px; border-radius: 10px; font-weight: 600; cursor: pointer; border: 0}
+.searchRow button:hover{background-color: var(--color-accent-hover); color: white; border: none; padding: 10px 14px; border-radius: 10px; font-weight: 600; cursor: pointer; border: 0}
+.searchRow button:active{background-color: var(--color-accent-active); color: white; border: none; padding: 10px 14px; border-radius: 10px; font-weight: 600; cursor: pointer; border: 0}
+.searchRow button:focus{background-color: var(--color-accent-focus); color: white; border: none; padding: 10px 14px; border-radius: 10px; font-weight: 600; cursor: pointer; border: 0}
+.searchRow button:disabled{background-color: var(--color-accent-disabled); color: white; border: none; padding: 10px 14px; border-radius: 10px; font-weight: 600; cursor: pointer; border: 0}
+.searchRow button:hover{background-color: var(--color-accent-hover); color: white; border: none; padding: 10px 14px; border-radius: 10px; font-weight: 600; cursor: pointer; border: 0}
+
+/* Responsive Design */
+@media (max-width: 880px) {
+  .therapist-intro {
+    padding: 40px 20px;
+  }
+
+  .intro-container h1 {
+    font-size: 36px;
+  }
+
+  .lead-intro {
+    font-size: 16px;
+  }
+
+  .intro-badges {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filters-section {
+    padding: 30px 20px;
+  }
+
+  .filters-header h2 {
+    font-size: 28px;
+  }
+
+  .searchRow {
+    flex-direction: column;
+  }
+
+  .searchRow select,
+  .searchRow button {
+    width: 100%;
+  }
+
+  .therapist-container {
+    padding: 30px 20px 60px;
+  }
+
+  .therapist-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .therapist-card-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .therapist-avatar {
+    width: 140px;
+    height: 180px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-container h1 {
+    font-size: 28px;
+  }
+
+  .lead-intro {
+    font-size: 15px;
+  }
+
+  .filters-header h2 {
+    font-size: 24px;
+  }
+
+  .therapist-card {
+    padding: 20px;
+  }
+
+  .therapist-name {
+    font-size: 18px;
+  }
+}
+
+/* Empty State */
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--color-muted-text);
+}
+
+.no-results h3 {
+  font-size: 24px;
+  margin: 0 0 12px 0;
+  color: var(--color-text);
+}
+
+.no-results p {
+  font-size: 16px;
+}

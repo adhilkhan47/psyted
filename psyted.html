@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Psyted — Best Online counselling in Kerala</title>
+<meta name="description" content="Demo teletherapy platform — find therapists, schedule sessions, and get support." />
+<link rel="icon" href="psyted-logo.PNG" type="image/png">
+<link rel="stylesheet" href="psyted.css">
+</head>
+<body>
+  <button id="theme-switch" class="light-mode">
+        <div class="switch-background"></div>
+        <div class="switch-icon active"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg></div>
+        <div class="switch-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg></div>
+    </button>
+<section class="container1">
+  <div class="wrap" role="main">
+    <header>
+      <a class="logo" href="psyted.html" aria-label="Psyted Home">
+        <img src="psyted-logo.PNG">
+        <div>
+          <div style="font-weight:800">PSYTED</div>
+        </div>
+      </a>
+        <nav aria-label="Main navigation" class="main-nav">
+    <a href="about-us.html">About Us</a>
+    <a href="therapist.html">Therapists</a>
+    <a href="contact.html">Contact</a>
+    <a class="primary" href="#book" id="quickBook">Book a Session</a>
+  </nav>
+  
+  <!-- Bubble Menu for Mobile -->
+  <div class="bubble-menu" aria-label="Mobile navigation menu">
+    <button class="bubble-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span class="hamburger-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+    <div class="bubble-items">
+      <a href="about-us.html" class="bubble-item">About Us</a>
+      <a href="therapist.html" class="bubble-item">Therapists</a>
+      <a href="contact.html" class="bubble-item">Contact</a>
+      <a href="#book" class="bubble-item primary" id="quickBookMobile">Book a Session</a>
+    </div>
+  </div>
+    </header>
+
+    <section class="hero">
+      <div class="heroCard" aria-labelledby="heroTitle">
+        <h1 id="heroTitle">Speak to a qualified therapist — fast, confidential, in your language.</h1>
+        <p class="lead">Find counsellors who understand your cultural background. Video, chat or phone sessions. Secure and private.</p>
+         
+        <div class="ctaRow">
+          <button class="btn primary" id="getStarted">Find Therapists</button>
+          <button class="btn ghost" id="whyBtn" style="z-index: 1;">How it works</button>
+        </div>
+        <div style="display: flex;width: 100%;flex-direction: row-reverse;">
+        <img id="hero-img" src="hero-image.PNG">
+       </div>
+
+        <div class="searchCard" aria-hidden="false" style="margin-top:18px">
+          <form id="searchForm" onsubmit="return false" aria-label="Find therapist">
+            <div class="searchRow">
+              <select id="filterLang" aria-label="Language">
+                <option value="">Any language</option>
+                <option value="Malayalam">Malayalam</option>
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+              </select>
+              <select id="filterIssue" aria-label="Issue">
+                <option value="">Any issue</option>
+                <option value="Anxiety">Anxiety</option>
+                <option value="Depression">Depression</option>
+                <option value="Couples">Couples</option>
+                <option value="Sexual">Sexual wellness</option>
+              </select>
+              <button class="btn primary" id="searchBtn">Search</button>
+            </div>
+          </form>
+        </div>
+
+        <div style="display:flex; gap:12px; margin-top:14px; align-items:center">
+          <div class="badge">Verified</div>
+          <div class="muted">100+ sessions conducted • Secure video • Confidential</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="card" style="margin-bottom:12px;">
+          <h3 style="margin:0 0 8px 0">Quick Booking</h3>
+          <p class="muted" style="margin:0 0 10px 0">Pick a therapist and schedule a 30-minute session in seconds.</p>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <select id="quickSelect">
+              <!-- Populated by JS -->
+            </select>
+            <button class="btn primary" id="quickBookBtn">Book</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h4 style="margin:0 0 8px 0">Why You’ll Love  Psyted?</h4>
+          <ul class="muted" style="margin:0; padding-left:20px;font-size: medium;">
+            <li>Trusted Confidential & Secure</li>
+            <li>Accessible from anywhere</li>
+            <li>Flexible scheduling</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div> 
+</section>
+
+<!-- numbers count -->
+  <p class="texth">Psyted has helped thousands of life <br>around the globe to <b class="koi">heal</b></p>
+<div class="counter-container">
+
+  <div class="counter-div"><span class="count" data-target="15">0</span>k<p class="texti">Hours of therapy <br>completed</p></div>
+  <div class="counter-div" style="border-left:2px solid; border-right: 2px solid"><span class="count" data-target="40">0</span>+<p class="texti">Countries</p></div>
+  <div class="counter-div"><span class="count" data-target="25"></span>+</b><p class="texti">Therapists</p></div>
+</div>
+
+<div class="autoRotate"><svg xmlns="http://www.w3.org/2000/svg" height="64px" viewBox="0 -960 960 960" width="64px"><path d="M600-80q-127-48-203.5-158T320-484q0-91 36-172.5T458-800H320v-80h280v280h-80v-148q-57 51-88.5 119.5T400-484q0 102 54 187.5T600-167v87Z"/></svg>
+</div>
+<div style="display: flex; justify-content: center;"><div class="btn-last-container" id="nonu"><h1>How it Works?</h1></div></div>
+ 
+
+    <div class="stack-area">
+        <div class="left texti">How It Works?</div>
+        <div class="right">
+            <div class="card1 cardo1"><div class="inner-number i-n1">1</div><h3>Choose Your Therapist</h3><p>Browse our network of qualified therapists, explore their areas of expertise, and find the best match for your unique needs and goals.</p></div>
+            <div class="card1 cardo2"><div class="inner-number i-n2">2</div><h3>Book Your Slot</h3><p>Pick a time that suits your routine. Our flexible scheduling helps you put your mental health first—no matter how busy life gets.</p></div>
+            <div class="card1 cardo3"><div class="inner-number i-n3">3</div><h3>Make Payment</h3><p>Choose between single sessions or cost-effective packages designed to support your ongoing mental well-being.</p></div>
+            <div class="card1 cardo4"><div class="inner-number i-n4">4</div><h3>Begin Your Journey</h3><p>Feel supported and empowered as you take meaningful steps toward healing, growth, and lasting well-being.</p></div>
+        </div>
+
+    </div>
+    <div class="autoRotate"><svg xmlns="http://www.w3.org/2000/svg" height="64px" viewBox="0 -960 960 960" width="64px"><path d="M600-80q-127-48-203.5-158T320-484q0-91 36-172.5T458-800H320v-80h280v280h-80v-148q-57 51-88.5 119.5T400-484q0 102 54 187.5T600-167v87Z"/></svg>
+</div>
+
+    <section id="therapists" class="therapist-container">
+      <div style="margin: auto;"><h2 style="font-size: 40px;font-weight: 600;text-align: center;" class="texti">Meet Our Therapists</h2></div>
+      <div style="display:flex; align-items:end; justify-content:space-between; gap:12px; padding-left: 30px;padding-right: 30px;">
+        <div>
+          <p class="muted" style="margin:6px 0 0 0">Filter by language and field of expertise.</p>
+        </div>
+        <div style="color:#94a3b8">Showing <span id="count">0</span></div>
+      </div>
+    <div class="therapist-carousel">
+      <div class="grid" id="therapistGrid" aria-live="polite" style="margin-top:12px">
+        <!-- Filled by JS -->
+      </div>
+     <div class="btn-last-container"><a href="therapist.html" class="btn btn-last">View All Therapists<svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#feedd3"><path d="m480-320 160-160-160-160-56 56 64 64H320v80h168l-64 64 56 56Zm0 240q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg></a></div>  
+    
+    </div> 
+    </section>  
+
+  <!-- Testimonials -->
+  <div class="autoRotate"><svg xmlns="http://www.w3.org/2000/svg" height="64px" viewBox="0 -960 960 960" width="64px"><path d="M600-80q-127-48-203.5-158T320-484q0-91 36-172.5T458-800H320v-80h280v280h-80v-148q-57 51-88.5 119.5T400-484q0 102 54 187.5T600-167v87Z"/></svg></div>
+  <div style="margin: auto;"><h2 style="font-size: 40px;font-weight: 600;text-align: center;" class="texti">Hear from Our Clients</h2></div>      
+<div class="smoke-container" style="position: relative;">
+  <section class="testimonials" style="display: flex; justify-content: center;">
+ <div class="testimonial-container">
+  <div class="column1">
+
+      <div class="testi-card">
+         <div class="testi-profile">
+         <img src="https://images.pexels.com/photos/1520760/pexels-photo-1520760.jpeg">
+         <div>
+         <h3>Riya Sharma</h3>
+         <p class="muted testi-place">Mumbai, Maharashtra</p>
+        </div>
+        </div>
+       <p class="text">
+      I love how simple yet powerful Psyted is. It’s my go-to when I need a quick reset during the day.</p>
+     </div>
+
+     <div class="testi-card">
+         <div class="testi-profile">
+         <img src="https://images.pexels.com/photos/4429288/pexels-photo-4429288.jpeg">
+         <div>
+         <h3>Anjali Menon</h3>
+         <p class="muted testi-place">Kochi, Kerala</p>
+        </div>
+        </div>
+       <p class="text">
+       Psyted has helped me pause and really listen to my thoughts. I’ve started journaling daily, and it’s changed how I respond to stress.</p>
+     </div>
+
+     <div class="testi-card">
+         <div class="testi-profile">
+         <img src="https://images.pexels.com/photos/31665972/pexels-photo-31665972.jpeg">
+         <div>
+         <h3>Karan Singh</h3>
+         <p class="muted testi-place">Jaipur, Rajasthan</p>
+        </div>
+        </div>
+       <p class="text">
+       Every night, I spend a few minutes on Psyted before bed. It’s become my way to unwind, reflect, and let go of the day’s noise</p>
+     </div>
+  </div>
+    <div class="column2">
+      <div class="testi-card">
+         <div class="testi-profile">
+         <img src="https://images.pexels.com/photos/11156567/pexels-photo-11156567.jpeg">
+         <div>
+         <h3>Dilna</h3>
+         <p class="muted testi-place">Calicut, Kerala</p>
+        </div>
+        </div>
+       <p class="text">
+       Psyted has become my morning ritual. The guided reflections help me start the day clear-headed and positive. I never expected an app to make me feel this supported.</p>
+     </div>
+
+     <div class="testi-card">
+         <div class="testi-profile">
+         <img src="https://images.pexels.com/photos/14672475/pexels-photo-14672475.jpeg">
+         <div>
+         <h3>Rahul Krishnan</h3>
+         <p class="muted testi-place">Thiruvananthapuram, Kerala</p>
+        </div>
+        </div>
+       <p class="text">
+        I didn’t think an app could make this kind of difference. Psyted gave me structure when my mind felt like chaos. The breathing and reflection tools are gold</p>
+     </div>
+
+     <div class="testi-card">
+         <div class="testi-profile">
+         <img src="https://images.pexels.com/photos/1486064/pexels-photo-1486064.jpeg">
+         <div>
+         <h3>Akhil Dev </h3>
+         <p class="muted testi-place">Palakkad, Kerala</p>
+        </div>
+        </div>
+       <p class="text">
+       t’s not just another wellness app — Psyted feels like a thoughtful friend in your pocket, reminding you to pause, breathe, reflect, and keep moving forward with kindness toward yourself.</p>
+     </div>
+  </div>
+
+  <div class="column3">
+      <div class="testi-card">
+         <div class="testi-profile">
+         <img src="https://images.pexels.com/photos/18885576/pexels-photo-18885576.jpeg">
+         <div>
+         <h3>Meera Iyer</h3>
+         <p class="muted testi-place">Chennai, Tamil Nadu</p>
+        </div>
+        </div>
+       <p class="text">
+       I’ve made journaling a habit because of Psyted. The prompts are so thoughtful — they make me reflect deeply without feeling pressured.</p>
+     </div>
+
+     <div class="testi-card">
+         <div class="testi-profile">
+         <img src="https://images.pexels.com/photos/26181425/pexels-photo-26181425.jpeg">
+         <div>
+         <h3>Tanvi Gupta</h3>
+         <p class="muted testi-place">Delhi, NCR</p>
+        </div>
+        </div>
+       <p class="text">
+       I’ve been using Psyted for six months now. The difference in my mental clarity is huge. It’s helped me slow down, set boundaries, and treat myself with more kindness.</p>
+     </div>
+
+     <div class="testi-card">
+         <div class="testi-profile">
+         <img src="https://images.pexels.com/photos/28010105/pexels-photo-28010105.jpeg">
+         <div>
+         <h3>Arjun Patel</h3>
+         <p class="muted testi-place">Ahmedabad, Gujarat</p>
+        </div>
+        </div>
+       <p class="text">
+       I’ve noticed real change in how I handle stress. The calm, structured approach Psyted takes makes it easier to build better habits.</p>
+     </div>
+  </div>
+
+    <div class="column4">
+      <div class="testi-card">
+         <div class="testi-profile">
+         <img src="https://images.pexels.com/photos/15100959/pexels-photo-15100959.jpeg">
+         <div>
+         <h3>Riya Sharma</h3>
+         <p class="muted testi-place">Mumbai, Maharashtra</p>
+        </div>
+        </div>
+       <p class="text">
+      I love how simple yet powerful Psyted is. It’s my go-to when I need a quick reset during the day.</p>
+     </div>
+
+     <div class="testi-card">
+         <div class="testi-profile">
+         <img src="https://images.pexels.com/photos/15094182/pexels-photo-15094182.jpeg">
+         <div>
+         <h3>Deepak Joshi</h3>
+         <p class="muted testi-place">Pune, Maharashtra</p>
+        </div>
+        </div>
+       <p class="text">
+       I was skeptical at first, but Psyted feels human. The tone, the design, the insights — everything feels crafted to genuinely help.</p>
+     </div>
+
+     <div class="testi-card">
+         <div class="testi-profile">
+         <img src="https://images.pexels.com/photos/9390414/pexels-photo-9390414.jpeg">
+         <div>
+         <h3>Maria George</h3>
+         <p class="muted testi-place">Thrissur, Kerala</p>
+        </div>
+        </div>
+       <p class="text">
+     The journaling prompts are powerful. Psyted showed me how small, consistent reflection builds real emotional strength. </div>
+  </div>
+    
+    
+ </div>
+</section>
+<div class="last-gradient"></div>
+</div>
+<div class="btn-last-container" style="margin-top: 100px;flex-direction: column;align-items: center;"><h1>Calmer mind is just<br> one click away.</h1>
+  <p class="muted">Find clarity, balance, and peace with trusted therapists who care.</p></div>
+ <div class="btn-last-container">
+  <a href="#therapists" class="btn btn-last">Schedule  Session<svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#feedd3"><path d="m480-320 160-160-160-160-56 56 64 64H320v80h168l-64 64 56 56Zm0 240q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg></a></div>  
+    
+ <!-- FOOTER -->
+  <footer>
+
+      <section class="footer-main">
+    
+   <div class="footer-links">
+  <div class="col">
+    <h5>Connect</h5>
+    <a href="#"><b>•</b>Instagram</a>
+    <a href="#"><b>•</b>Facebook</a>
+    <a href="#"><b>•</b>Twitter</a>
+    <a href="#"><b>•</b>Youtube</a>
+  </div>
+  <div class="col">
+    <h5>About</h5>
+    <a href="#">Who We Are</a>
+    <a href="#">Our Mission</a>
+    <a href="#">Therapists</a>
+    <a href="#">Success Stories</a>
+  </div>
+  <div class="col">
+    <h5>Service</h5>
+    <a href="#">Individual Therapy</a>
+    <a href="#">Couple Therapy</a>
+    <a href="#">Sexual Wellness</a>
+    <a href="#">Other Conditions</a>
+  </div>
+  <div class="col">
+    <h5>Resources</h5>
+    <a href="#">Blog</a>
+    <a href="#">Free Webinars</a>
+    <a href="#">Location</a>
+    <a href="#">FAQs</a>
+  </div>
+  <div class="col">
+    <h5>Support</h5>
+    <a href="#">Contact Us</a>
+    <a href="#">Customer Support</a>
+    <a href="#">Refund Policy</a>
+    <a href="#">Privacy Policy</a>
+  </div>
+</div>
+     <br>
+  </section>
+  
+  <section class="footer-bottom">
+    <p>© 2025 Psyted. All rights reserved.</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  </section>
+  <br>
+  </footer>
+
+
+  <!-- Modal -->
+  <div id="modalBackdrop" class="modalBackdrop" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal" role="document" aria-labelledby="modalTitle">
+      <header>
+        <div>
+          <h3 id="modalTitle" style="margin:0">Book Session</h3>
+          <div class="muted" id="modalSubtitle">Choose a slot</div>
+        </div>
+        <button class="btn ghost" id="closeModal" aria-label="Close booking">Close</button>
+      </header>
+
+      <div id="modalBody" style="margin-top:12px">
+        <div class="muted">Select date & time</div>
+        <div style="display:flex; gap:8px; margin-top:8px">
+          <input type="date" id="sessionDate" style="padding:8px;border-radius:8px;border:0;background:rgba(255,255,255,0.02);color:inherit">
+          <select id="sessionLength" style="padding:8px;border-radius:8px;border:0;background:rgba(255,255,255,0.02);color:inherit">
+            <option value="30">30 min</option>
+            <option value="45">45 min</option>
+            <option value="60">60 min</option>
+          </select>
+        </div>
+
+        <div style="margin-top:12px">
+          <div class="muted">Available times</div>
+          <div class="slots" id="slotList" role="list" aria-live="polite">
+            <!-- JS adds slots -->
+          </div>
+        </div>
+
+        <div style="margin-top:12px; display:flex; gap:8px; align-items:center">
+          <input type="text" id="clientName" placeholder="Your name" style="flex:1;padding:8px;border-radius:8px;border:0;background:rgba(255,255,255,0.02);color:inherit">
+          <input type="tel" id="clientPhone" placeholder="Phone" style="width:140px;padding:8px;border-radius:8px;border:0;background:rgba(255,255,255,0.02);color:inherit">
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px">
+          <div class="muted">Price: <strong id="modalPrice">₹800</strong></div>
+          <div>
+            <button class="btn ghost" id="cancelBooking">Cancel</button>
+            <button class="btn primary" id="confirmBooking">Confirm & Pay</button>
+          </div>
+        </div>
+
+        <div id="bookingResult" style="margin-top:12px; display:none" class="card">
+          <div id="bookingMsg"></div>
+          <pre id="bookingJSON" style="white-space:pre-wrap;color:#94a3b8;font-size:13px"></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+<script src="psyted.js" defer></script>
+</body>
+</html>

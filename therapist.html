@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Our Therapists — Psyted</title>
+<meta name="description" content="Meet our licensed, compassionate therapists. All therapists are Malayalam-speaking and ready to support you." />
+<link rel="icon" href="psyted-logo.PNG" type="image/png">
+<link rel="stylesheet" href="psyted.css">
+<link rel="stylesheet" href="therapist.css">
+</head>
+<body>
+  <button id="theme-switch" class="light-mode">
+        <div class="switch-background"></div>
+        <div class="switch-icon active"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg></div>
+        <div class="switch-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg></div>
+    </button>
+<section class="container1">
+  <div class="wrap" role="main">
+    <header>
+      <a class="logo" href="psyted.html" aria-label="Psyted Home">
+        <img src="psyted-logo.PNG">
+        <div>
+          <div style="font-weight:800">PSYTED</div>
+        </div>
+      </a>
+    <nav aria-label="Main navigation" class="main-nav">
+    <a href="about-us.html">About Us</a>
+    <a href="therapist.html">Therapists</a>
+    <a href="contact.html">Contact</a>
+    <a class="primary" href="#book" id="quickBook">Book a Session</a>
+  </nav>
+  
+  <!-- Bubble Menu for Mobile -->
+  <div class="bubble-menu" aria-label="Mobile navigation menu">
+    <button class="bubble-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span class="hamburger-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+    <div class="bubble-items">
+      <a href="about-us.html" class="bubble-item">About Us</a>
+      <a href="therapist.html" class="bubble-item">Therapists</a>
+      <a href="contact.html" class="bubble-item">Contact</a>
+      <a href="#book" class="bubble-item primary" id="quickBookMobile">Book a Session</a>
+    </div>
+  </div>
+    </header>
+  </div> 
+</section>
+
+<!-- Intro Section -->
+<section class="therapist-intro">
+  <div class="intro-container">
+    <h1 class="texti">Meet Our Expert Therapists</h1>
+    <p class="lead-intro">All our therapists are licensed, compassionate, and Malayalam-speaking professionals dedicated to providing you with culturally sensitive and empathetic mental health support. Each therapist brings years of experience and specialized training to help you on your journey toward healing and growth.</p>
+    <div class="intro-badges">
+      <div class="badge">✓ Licensed Professionals</div>
+      <div class="badge">✓ Culturally Sensitive</div>
+      <div class="badge">✓ Malayalam & English Speaking</div>
+    </div>
+  </div>
+</section>
+
+<!-- Filters Section -->
+<section class="filters-section">
+  <div class="filters-container">
+    <div class="filters-header">
+      <h2 class="texti">Find Your Perfect Match</h2>
+      <p class="muted">Filter by language and field of expertise to find the therapist who best fits your needs.</p>
+    </div>
+    <div class="searchCard">
+      <form id="searchForm" onsubmit="return false" aria-label="Filter therapists">
+        <div class="searchRow">
+          <select id="filterLang" aria-label="Language">
+            <option value="">Any language</option>
+            <option value="Malayalam">Malayalam</option>
+            <option value="English">English</option>
+            <option value="Hindi">Hindi</option>
+          </select>
+          <select id="filterIssue" aria-label="Specialization">
+            <option value="">Any specialization</option>
+            <option value="Anxiety">Anxiety</option>
+            <option value="Depression">Depression</option>
+            <option value="Couples">Couples</option>
+            <option value="Relationship">Relationship</option>
+            <option value="Sexual">Sexual wellness</option>
+            <option value="Trauma">Trauma</option>
+            <option value="Child">Child</option>
+            <option value="ADHD">ADHD</option>
+          </select>
+          <button class="btn primary" id="searchBtn">Search</button>
+          <button class="btn ghost" id="resetBtn">Reset</button>
+        </div>
+      </form>
+    </div>
+    <div class="results-count">
+      <span class="muted">Showing <span id="count">0</span> therapist(s)</span>
+    </div>
+  </div>
+</section>
+
+<!-- Therapists Grid -->
+<section id="therapists" class="therapist-container">
+  <div class="therapist-grid" id="therapistGrid" aria-live="polite">
+    <!-- Filled by JS -->
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <section class="footer-main">
+    <div class="footer-links">
+      <div class="col">
+        <h5>Connect</h5>
+        <a href="#"><b>•</b>Instagram</a>
+        <a href="#"><b>•</b>Facebook</a>
+        <a href="#"><b>•</b>Twitter</a>
+        <a href="#"><b>•</b>Youtube</a>
+      </div>
+      <div class="col">
+        <h5>About</h5>
+        <a href="#">Who We Are</a>
+        <a href="#">Our Mission</a>
+        <a href="#">Therapists</a>
+        <a href="#">Success Stories</a>
+      </div>
+      <div class="col">
+        <h5>Service</h5>
+        <a href="#">Individual Therapy</a>
+        <a href="#">Couple Therapy</a>
+        <a href="#">Sexual Wellness</a>
+        <a href="#">Other Conditions</a>
+      </div>
+      <div class="col">
+        <h5>Resources</h5>
+        <a href="#">Blog</a>
+        <a href="#">Free Webinars</a>
+        <a href="#">Location</a>
+        <a href="#">FAQs</a>
+      </div>
+      <div class="col">
+        <h5>Support</h5>
+        <a href="#">Contact Us</a>
+        <a href="#">Customer Support</a>
+        <a href="#">Refund Policy</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+    <br>
+  </section>
+  
+  <section class="footer-bottom">
+    <p>© 2025 Psyted. All rights reserved.</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  </section>
+  <br>
+</footer>
+
+<!-- Modal -->
+<div id="modalBackdrop" class="modalBackdrop" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal" role="document" aria-labelledby="modalTitle">
+    <header>
+      <div>
+        <h3 id="modalTitle" style="margin:0">Book Session</h3>
+        <div class="muted" id="modalSubtitle">Choose a slot</div>
+      </div>
+      <button class="btn ghost" id="closeModal" aria-label="Close booking">Close</button>
+    </header>
+
+    <div id="modalBody" style="margin-top:12px">
+      <div class="muted">Select date & time</div>
+      <div style="display:flex; gap:8px; margin-top:8px">
+        <input type="date" id="sessionDate" style="padding:8px;border-radius:8px;border:0;background:rgba(255,255,255,0.02);color:inherit">
+        <select id="sessionLength" style="padding:8px;border-radius:8px;border:0;background:rgba(255,255,255,0.02);color:inherit">
+          <option value="30">30 min</option>
+          <option value="45">45 min</option>
+          <option value="60">60 min</option>
+        </select>
+      </div>
+
+      <div style="margin-top:12px">
+        <div class="muted">Available times</div>
+        <div class="slots" id="slotList" role="list" aria-live="polite">
+          <!-- JS adds slots -->
+        </div>
+      </div>
+
+      <div style="margin-top:12px; display:flex; gap:8px; align-items:center">
+        <input type="text" id="clientName" placeholder="Your name" style="flex:1;padding:8px;border-radius:8px;border:0;background:rgba(255,255,255,0.02);color:inherit">
+        <input type="tel" id="clientPhone" placeholder="Phone" style="width:140px;padding:8px;border-radius:8px;border:0;background:rgba(255,255,255,0.02);color:inherit">
+      </div>
+
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px">
+        <div class="muted">Price: <strong id="modalPrice">₹800</strong></div>
+        <div>
+          <button class="btn ghost" id="cancelBooking">Cancel</button>
+          <button class="btn primary" id="confirmBooking">Confirm & Pay</button>
+        </div>
+      </div>
+
+      <div id="bookingResult" style="margin-top:12px; display:none" class="card">
+        <div id="bookingMsg"></div>
+        <pre id="bookingJSON" style="white-space:pre-wrap;color:#94a3b8;font-size:13px"></pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="therapist.js" defer></script>
+</body>
+</html>
